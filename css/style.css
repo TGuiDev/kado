@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
 *{
-    font-family: 'Poppins',cursive;
+    font-family: 'Poppins', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body{
     color: azure;
@@ -11,60 +14,88 @@ body{
     align-items: center;
     justify-content: center;
     background-color: black;
+    text-align: center;
 }
 .greetings{
     font-size: 6rem;
     font-weight: 900;
 }
 .greetings > span{
-    animation: glow 2.5s ease-in-out infinite;
+    animation: glow 1s ease-in-out infinite;
 }
-@keyframes glow{
-    0%, 100%{
-        color: #fff;
-        text-shadow: 0 0 12px #d64be9, 0 0 50px #7f0cdd, 0 0 100px #f30dcd;
+@keyframes glow {
+    0%, 100% {
+        color: #fa79e4;
+        text-shadow: 0 0 12px #d64be9, 0 0 25px #7f0cdd, 0 0 50px #f30dcd;
     }
-    10%, 90%{
-        color: #111;
-        text-shadow: none;
+    50% {
+        color: #ec6ab8;
+        text-shadow: 0 0 8px #d64be9, 0 0 16px #7f0cdd, 0 0 30px #f30dcd;
     }
-}
-.greetings > span:nth-child(2){
-    animation-delay: .2s ;
-}
-.greetings > span:nth-child(3){
-    animation-delay: .4s ;
-}
-.greetings > span:nth-child(4){
-    animation-delay: .6s;
-}
-.greetings > span:nth-child(5){
-    animation-delay: .8s;
 }
 
-.description{
+.greetings > span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.greetings > span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+.greetings > span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+.greetings > span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+.greetings > span:nth-child(6) {
+    animation-delay: 0.5s;
+}
+.greetings > span:nth-child(7) {
+    animation-delay: 0.6s;
+}
+.greetings > span:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+.description {
     font-size: 1.5rem;
     margin-bottom: 20px;
 }
 
-.button a{
+.button {
+    margin-top: 20px;
+}
+
+.button a {
     text-decoration: none;
     font-size: 1rem;
     color: #111;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-@media screen and (max-width:574px){
-    .greetings{
-        display: block;
+.button a:hover {
+    background: #c94db4;
+    color: #fff;
+}
+
+.button p {
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 574px) {
+    .greetings {
         font-size: 3rem;
         font-weight: 500;
         text-align: center;
     }
-    .description{
+    .description {
         font-size: 1rem;
     }
-    
-    .button a{
-        font-size: .5rem;
+    .button a {
+        font-size: 0.8rem;
+        padding: 8px 16px;
     }
 }
